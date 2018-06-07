@@ -6,7 +6,10 @@ from django.db import models
 class Article(models.Model):
     name = models.CharField(max_length=40)
     amount = models.IntegerField()
-    article_numer = models.BigIntegerField(unique=True)
+    article_number = models.BigIntegerField(unique=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Warehouse(models.Model):
