@@ -1,1 +1,2 @@
-warehouse/__pycache__/
+db.sqlite3
+pywarehouse/__pycache__/**
