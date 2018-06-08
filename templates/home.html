@@ -3,15 +3,39 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Boards</title>
+    <title>Articles Overview</title>
 </head>
 
 <body>
     <h1>Articles</h1>
 
-    {% for article in articles %} {{ article.name }}
-    <br> {% endfor %}
-
+    <table border="1">
+        <thead>
+            <tr>
+                <!-- 6 Columns -->
+                <th>Article</th>
+                <th>Amount</th>
+                <th>Article Number</th>
+                <th>Warehouse</th>
+                <th>Shelf</th>
+                <th>Storage Unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in articles %}
+            <tr>
+                <td>
+                    {{ article.name }}
+                </td>
+                <td>{{ article.amount }}</td>
+                <td> {{ article.article_number }} </td>
+                <td> {{ article.inWarehouse }} </td>
+                <td> {{ article.inShelf }} </td>
+                <td> {{ article.inStorageUnit }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 
 </html>
