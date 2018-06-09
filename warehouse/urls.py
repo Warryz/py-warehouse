@@ -19,5 +19,7 @@ from pywarehouse import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('articles/', views.article_overview, name='article_overview'),
+    # path('article/(?P<pk>\d+)/', views.article_view, name='article_view'),
     path('admin/', admin.site.urls),
 ]

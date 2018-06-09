@@ -7,5 +7,10 @@ from .models import Article
 
 
 def home(request):
+    return HttpResponse("Under Construction.")
+
+
+def article_overview(request):
     articles = Article.objects.all()
-    return render(request, 'home.html', {'articles': articles})
+    return render(request, 'article_overview.html',
+                  {'article_overview': article_overview})
