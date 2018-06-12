@@ -14,13 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
+
 from pywarehouse import views
 
 urlpatterns = [
     path('', views.home, name='home'),
     path('start/', views.start, name='start'),
     path('articles/', views.article_overview, name='article_overview'),
-    # path('article/(?P<pk>\d+)/', views.article_view, name='article_view'),
+    re_path(r'article/(?P<pk>\d+)/', views.article_view, name='article_view'),
+    re_path(r'article/(?P<pk>\d+)/new/',
+            views.new_article, name='new_article'),
     path('admin/', admin.site.urls),
 ]
