@@ -18,3 +18,11 @@ def article_overview(request):
     articles = Article.objects.all()
     return render(request, 'article_overview.html',
                   {'article_overview': article_overview})
+
+
+def article_view(request, pk):
+    pass
+
+
+def new_article(request):
+    pass
