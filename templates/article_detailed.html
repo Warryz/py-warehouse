@@ -1,0 +1,12 @@
+{% extends 'master.html' %}
+
+{% block title %}Article Details{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'article_overview' %}">Overview</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'article_view' article.pk %}">{{ Article.name }}</a></li>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

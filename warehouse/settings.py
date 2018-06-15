@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Django Widget Tweaks
+    'widget_tweaks',
+
     # Adding the warehouse application
     'pywarehouse'
 ]

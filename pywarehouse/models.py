@@ -9,7 +9,7 @@ class Article(models.Model):
     article_number = models.BigIntegerField(unique=True)
 
     def __str__(self):
-        return self.name
+        return "Name: {} | Amount: {} | Number: {}".format(self.name, self.amount, self.article_number)
 
 
 class Warehouse(models.Model):

@@ -22,8 +22,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('start/', views.start, name='start'),
     path('articles/', views.article_overview, name='article_overview'),
+    path('article/new/', views.new_article, name='new_article'),
     re_path(r'article/(?P<pk>\d+)/', views.article_view, name='article_view'),
-    re_path(r'article/(?P<pk>\d+)/new/',
-            views.new_article, name='new_article'),
     path('admin/', admin.site.urls),
 ]
