@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'widget_tweaks',
 
     # Adding the warehouse application
-    'pywarehouse'
+    'pywarehouse',
+
+    # Adding the accounts application for user management
+    'accounts'
 ]
 
 MIDDLEWARE = [

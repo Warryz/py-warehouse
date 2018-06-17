@@ -2,3 +2,5 @@ db.sqlite3
 pywarehouse/__pycache__/
 warehouse/__pycache__/
 pywarehouse/migrations/__pycache__/
+accounts/migrations/
+accounts/__pycache__/
