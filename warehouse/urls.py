@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 
+from accounts import views as accounts_views
 from pywarehouse import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('signup/', accounts_views.signup, name='signup'),
     path('start/', views.start, name='start'),
     path('articles/', views.article_overview, name='article_overview'),
     path('article/new/', views.new_article, name='new_article'),
